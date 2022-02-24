@@ -1,0 +1,22 @@
+
+functionprime()
+{
+   primeCheck=0;
+   i=2;
+   while (( $primeCheck!=$IS_PRIME -a $i<$1 ))
+   do
+      d=$(( $1%$i ));
+      if [ $d -eq 0 ]
+      then
+         b=$NOT_PRIME;
+      fi
+   done
+   case $primeCheck in
+      $IS_PRIME)
+         echo " $1 is a prime number ";
+         ;;
+      *)
+         echo " $1 is not a prime number ";
+         ;;
+   esac
+}
